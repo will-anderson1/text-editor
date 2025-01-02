@@ -1,0 +1,157 @@
+:root {
+  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #0f0f0f;
+  background-color: #f6f6f6;
+  
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  --textarea-background-color: #2f2f2f;
+}
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+
+.row {
+  display: flex;
+  justify-content: center;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+
+a:hover {
+  color: #535bf2;
+}
+
+h1 {
+  text-align: center;
+}
+
+input,
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  color: #0f0f0f;
+  background-color: #ffffff;
+  transition: border-color 0.25s;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+button {
+  cursor: pointer;
+}
+
+button:hover {
+  border-color: #396cd8;
+}
+button:active {
+  border-color: #396cd8;
+  background-color: #e8e8e8;
+}
+
+input,
+button {
+  outline: none;
+}
+
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color: #f6f6f6;
+    background-color: #2f2f2f;
+  }
+
+  a:hover {
+    color: #24c8db;
+  }
+
+  input,
+  button {
+    color: #ffffff;
+    background-color: #0f0f0f98;
+  }
+  button:active {
+    background-color: #0f0f0f69;
+  }
+}
+.container {
+  display: grid;
+  height: 100vh;
+  grid-template-rows: 6% 90% 4%; /* Header, content, footer */
+  grid-template-columns: 10% 90%;
+  overflow: hidden; /* Prevents overflow */
+}
+
+.left-sidebar, .right-sidebar {
+  /* Ensure sidebars do not shrink or grow */
+  overflow: auto; /* Allows scrolling within the sidebar if needed */
+  background-color: green; /* For left sidebar */
+}
+
+.right-sidebar {
+  background-color: greenyellow; /* For right sidebar */
+}
+
+.main-content {
+  overflow: auto; /* Allows scrolling within the main content */
+  background-color: plum; /* Background color for visibility */
+  min-height: 0; /* Reset minimum height behavior */
+  min-width: 0; /* Reset minimum width behavior */
+}
+
+header, footer {
+  grid-column: 1 / -1; /* Span across all columns */
+  background-color: rgb(98, 98, 101); /* For header */
+}
+
+footer {
+  grid-column: 1 / -1; /* Spans across all columns */
+  background-color: blue; /* Visibility */
+  color: white; /* Text color */
+  background-color: blue;
+}
+header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: right;
+  /* padding: 10px; */
+}
+
+.svg-group {
+  margin-left: auto;
+  display: flex;
+  flex-shrink: 0; /* Prevents these elements from shrinking */
+  gap: 10px; /* Adjust spacing between the SVG containers */
+}
+
+.newFileButtonContainer, .openFileButtonContainer {
+  padding: 5px;
+  border-radius: 5px; /* Optional: rounded corners for hover effect */
+  transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+.newFileButtonContainer:hover, .openFileButtonContainer:hover {
+  background-color: #7c7c7c; /* Change color on hover */
+}
+
+img {
+  width: 24px; /* Ensuring consistent icon size */
+  height: auto;
+}
+
